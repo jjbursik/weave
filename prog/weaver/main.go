@@ -171,6 +171,8 @@ func main() {
 		trustedSubnetStr   string
 		dbPrefix           string
 		useAWSVPC          bool
+		overlay            weave.NetworkOverlay
+		bridge             weave.Bridge
 
 		defaultDockerHost = "unix:///var/run/docker.sock"
 	)
@@ -248,7 +250,12 @@ func main() {
 		networkConfig.PacketLogging = nopPacketLogging{}
 	}
 
-	overlay, bridge := createOverlay(datapathName, ifaceName, config.Host, config.Port, bufSzMB, useAWSVPC)
+	overlay = weave.NewNullNetworkOverlay()
+	bridge = weave.NewNullBridge()
+
+	if !useAWSVPC {
+		overlay, bridge = createOverlay(datapathName, ifaceName, config.Host, config.Port, bufSzMB)
+	}
 	networkConfig.Bridge = bridge
 
 	name := peerName(routerName, bridge.Interface())
@@ -386,13 +393,7 @@ func (nopPacketLogging) LogPacket(string, weave.PacketKey) {
 func (nopPacketLogging) LogForwardPacket(string, weave.ForwardPacketKey) {
 }
 
-func createOverlay(datapathName string, ifaceName string, host string, port int, bufSzMB int,
-	useAWSVPC bool) (weave.NetworkOverlay, weave.Bridge) {
-
-	if useAWSVPC {
-		return weave.NullNetworkOverlay{}, weave.NullBridge{}
-	}
-
+func createOverlay(datapathName string, ifaceName string, host string, port int, bufSzMB int) (weave.NetworkOverlay, weave.Bridge) {
 	overlay := weave.NewOverlaySwitch()
 	var bridge weave.Bridge
 	switch {
