@@ -77,5 +77,4 @@ On each remaining peer:
     weave forget <removed peer>
 
 This final step is not mandatory, but it will eliminate log noise and
-spurious network traffic by stopping reconnection attempts and
-preventing further connection attempts after restart.
+spurious network traffic by stopping reconnection attempts.
