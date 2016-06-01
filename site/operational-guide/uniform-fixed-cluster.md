@@ -28,7 +28,6 @@ On each initial peer, at boot, via
 
 * `--no-restart` disables the Docker restart policy as this will be
   handled by systemd.
-
 * `$PEERS` is obtained from `/etc/sysconfig/weave` as described in the
   linked systemd documentation. For convenience, this may contain the
   address of the peer which is being launched, so that you don't have
