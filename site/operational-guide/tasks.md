@@ -41,8 +41,7 @@ periodically with the following command on any peer:
 
 This will list the names of unreachable peers; if you are satisifed
 that they are truly gone, rather than temporarily unreachable due to a
-partition, you can reclaim their space by following the advice in the
-next section.
+partition, you can reclaim their space manually.
 
 When a peer dies unexpectedly the remaining peers will consider its
 address space to be unavailable even after it has remained unreachable
