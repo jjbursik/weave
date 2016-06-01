@@ -13,7 +13,7 @@ If you're aiming for a non-interactive installation, you can use
 systemd to launch weave after Docker - see [systemd docs](/site/systemd.md) for
 details.
 
-## Detecting Lost IP Address Space
+## Detecting and Reclaiming Lost IP Address Space
 
 The recommended way of removing a peer is to run `weave reset` on that
 peer before the underlying host is decommissioned or repurposed - this
@@ -43,8 +43,6 @@ This will list the names of unreachable peers; if you are satisifed
 that they are truly gone, rather than temporarily unreachable due to a
 partition, you can reclaim their space by following the advice in the
 next section.
-
-## Reclaiming Lost IP Address Space
 
 When a peer dies unexpectedly the remaining peers will consider its
 address space to be unavailable even after it has remained unreachable
