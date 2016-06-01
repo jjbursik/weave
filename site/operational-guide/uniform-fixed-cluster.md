@@ -44,7 +44,8 @@ to force consensus - once this completes successfully, IP address
 allocations can proceed under partition and it is safe to add new
 peers. If this command blocks it means that there is some issue (such
 as a network partition or failed peers) that is preventing a quorum
-from being reached – you will need to address that before moving on.
+from being reached – you will need to [address
+that](/site/troubleshooting.md) before moving on.
 
 ### Add a Peer
 

@@ -33,8 +33,8 @@ to ensure that the new peer has joined to the existing network; you
 _must_ wait for this to complete successfully before moving on to add
 further new peers. If this command blocks it means that there is some
 issue (such as a network partition or failed peers) that is preventing
-a quorum from being reached - you will need to address that before
-moving on.
+a quorum from being reached - you will need to [address
+that](/site/troubleshooting.md) before moving on.
 
 Then optionally on each existing peer:
 
