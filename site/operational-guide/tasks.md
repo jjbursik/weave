@@ -10,8 +10,8 @@ once and your system is configured to start Docker on boot then weave
 will be started automatically on system restarts.
 
 If you're aiming for a non-interactive installation, you can use
-systemd to launch weave after Docker - see [systemd docs](/site/systemd.md) for
-details.
+systemd to launch weave after Docker - see [systemd
+docs](/site/installing-weave/systemd.md) for details.
 
 ##<a name="detect-reclaim-ipam"></a>Detect and Reclaim Lost IP Address Space
 
