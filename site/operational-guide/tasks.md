@@ -55,7 +55,7 @@ The `weave rmpeer` command is provided to perform this task, and must
 be executed on one of the remaining peers. That peer will take
 ownership of the freed address space.
 
-## Rolling Upgrades
+## Upgrade a Cluster
 
 Protocol versioning and feature negotiation are employed in Weave Net
 to enable incremental rolling upgrades - each major release maintains
