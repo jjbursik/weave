@@ -2,7 +2,7 @@
 title: Administrative Tasks
 menu_order: 60
 ---
-## Configure Weave to Start Automatically on Boot
+##<a name="start-on-boot"></a>Configure Weave to Start Automatically on Boot
 
 `weave launch` runs all weave's containers with a Docker restart
 policy of `always`, so as long as you have launched weave manually
@@ -13,7 +13,7 @@ If you're aiming for a non-interactive installation, you can use
 systemd to launch weave after Docker - see [systemd docs](/site/systemd.md) for
 details.
 
-## Detect and Reclaim Lost IP Address Space
+##<a name="detect-reclaim-ipam"></a>Detect and Reclaim Lost IP Address Space
 
 The recommended way of removing a peer is to run `weave reset` on that
 peer before the underlying host is decommissioned or repurposed - this
@@ -55,7 +55,7 @@ The `weave rmpeer` command is provided to perform this task, and must
 be executed on one of the remaining peers. That peer will take
 ownership of the freed address space.
 
-## Upgrade a Cluster
+##<a name="cluster-upgrade"></a>Upgrade a Cluster
 
 Protocol versioning and feature negotiation are employed in Weave Net
 to enable incremental rolling upgrades - each major release maintains
@@ -89,7 +89,7 @@ first:
 > there are any special caveats or deviations from the standard
 > procedure.
 
-## Reset Persisted Data
+##<a name="reset"></a>Reset Persisted Data
 
 Weave Net persists information in a data volume container named
 `weavedb`. If you wish to start from a completely clean slate (for

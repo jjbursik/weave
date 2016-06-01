@@ -139,5 +139,5 @@ example across reboots):
 
 The persistence of this information is managed transparently in a
 volume container but can be
-[destroyed explicitly](/site/operational-guide/tasks.md)
+[destroyed explicitly](/site/operational-guide/tasks.md#reset)
 if necessary.

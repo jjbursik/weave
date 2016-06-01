@@ -51,6 +51,5 @@ On dynamic peer to be removed:
 If for any reason you cannot arrange for `weave reset` to be run on
 the peer before the underlying host is destroyed (for example when
 using spot instances that can be destroyed without notice), you will
-need an asynchronous process to reclaim lost IP address space
-- see the [Administrative Tasks](/site/operational-guide/tasks.md)
-  section for more information.
+need an asynchronous process to [reclaim lost IP address
+space](/site/operational-guide/tasks.md#detect-reclaim-ipam).
