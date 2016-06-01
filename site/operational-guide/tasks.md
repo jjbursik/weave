@@ -58,7 +58,7 @@ ownership of the freed address space.
 
 Protocol versioning and feature negotiation are employed in Weave Net
 to enable incremental rolling upgrades - each major release maintains
-the ability to speak to the preceeding major release at a minimum, and
+the ability to speak to the preceding major release at a minimum, and
 connected peers only utilise features which both support. The general
 upgrade procedure is as follows:
 
