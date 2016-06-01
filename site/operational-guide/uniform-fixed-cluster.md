@@ -19,7 +19,7 @@ following characteristics:
   suited to deployments which change size infrequently as a planned
   maintenance event.
 
-### Bootstrapping
+### Bootstrap
 
 On each initial peer, at boot, via
 [systemd](/site/installing-weave/systemd.md):
@@ -46,7 +46,7 @@ peers. If this command blocks it means that there is some issue (such
 as a network partition or failed peers) that is preventing a quorum
 from being reached – you will need to address that before moving on.
 
-### Adding a Peer
+### Add a Peer
 
 On new peer, at boot, via
 [systemd](/site/installing-weave/systemd.md):
@@ -62,7 +62,7 @@ For maximum robustness, you should then distribute an updated
 `/etc/sysconfig/weave` file including the new peer to all existing
 peers.
 
-### Removing a Peer
+### Remove a Peer
 
 On peer to be removed:
 

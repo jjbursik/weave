@@ -14,7 +14,7 @@ A uniform dynamic cluster has the following characteristics:
   it ideally suited for use with convergent provisioning tools that
   operate across multiple hosts in an asynchronous fashion.
 
-## Bootstrapping
+## Bootstrap
 
 On each initial peer, at boot, via
 [systemd](/site/installing-weave/systemd.md):
@@ -27,7 +27,7 @@ Where `$PEERS` is obtained from `/etc/sysconfig/weave` as described in
 the linked systemd documentation, and includes the complete set of
 initial peers.
 
-## Adding a Peer
+## Add a Peer
 
 On each new peer, at boot, via
 [systemd](/site/installing-weave/systemd.md):
@@ -61,7 +61,7 @@ For maximum robustness, you should then distribute an updated
 `/etc/sysconfig/weave` file including the new peer to all existing
 peers.
 
-### Removing a Peer
+### Remove a Peer
 
 On peer to be removed:
 

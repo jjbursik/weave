@@ -9,13 +9,13 @@ to automation and configuration management. Nevertheless, the
 resulting weave network will survive host reboots without the use of a
 systemd unit as long as Docker is configured to start on boot.
 
-### Bootstrapping
+### Bootstrap
 
 On initial peer:
 
     weave launch
 
-### Adding a Peer
+### Add a Peer
 
 On new peer:
 
@@ -44,7 +44,7 @@ This step is not mandatory, but improves the robustness of network
 reformation in the face of node failures as _nodes do not remember to
 connect to discovered peers on restart_.
 
-### Stopping a Peer
+### Stop a Peer
 
 A peer can be stopped temporarily with the following command:
 
@@ -57,7 +57,7 @@ connect` or `weave forget`. Once a peer has been stopped with `weave
 stop`, it will not be restarted automatically by Docker even if the
 machine reboots - you will need to `weave launch` it again manually.
 
-### Removing a Peer
+### Remove a Peer
 
 On peer to be removed:
 

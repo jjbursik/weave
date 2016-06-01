@@ -3,7 +3,7 @@ title: Autoscaling
 menu_order: 40
 ---
 
-### Bootstrapping
+### Bootstrap
 
 An autoscaling configuration begins with a fixed cluster:
 
