@@ -51,7 +51,7 @@ it is safe to appropriate the space for itself, and so an
 administrative action is required to reclaim it.
 
 The `weave rmpeer` command is provided to perform this task, and must
-be executed on one of the remaining peers. That peer will take
+be executed on _one_ of the remaining peers. That peer will take
 ownership of the freed address space.
 
 ##<a name="cluster-upgrade"></a>Upgrade a Cluster
