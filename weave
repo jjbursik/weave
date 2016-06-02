@@ -1740,6 +1740,10 @@ warn_plugin_active() {
     echo "WARNING: docker may hang in this state; re-launch weave and remove attached containers before shutting down" >&2
 }
 
+warn_rmpeer() {
+    echo "WARNING: unable to remove weave from cluster; you may need to 'weave rmpeer' from another node" >&2
+}
+
 stop_plugin() {
     util_op remove-plugin-network weave || warn_plugin_active
     stop $PLUGIN_CONTAINER_NAME "Plugin"
@@ -2180,7 +2184,7 @@ EOF
         [ $# -eq 0 ] || usage
         plugin_disabled || util_op remove-plugin-network weave || warn_plugin_active
         warn_if_stopping_proxy_in_env
-        call_weave DELETE /peer >/dev/null 2>&1 || true
+        call_weave DELETE /peer >/dev/null 2>&1 || warn_rmpeer
         fractional_sleep 0.5 # Allow some time for broadcast updates to go out
         for NAME in $PLUGIN_CONTAINER_NAME $CONTAINER_NAME $PROXY_CONTAINER_NAME ; do
             docker stop  $NAME >/dev/null 2>&1 || true
