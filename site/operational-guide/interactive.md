@@ -53,9 +53,8 @@ A peer can be stopped temporarily with the following command:
 Such a peer will remember IP address allocation information on the
 next `weave launch` but will forget any discovered peers or
 modifications to the initial peer list that were made with `weave
-connect` or `weave forget`. Once a peer has been stopped with `weave
-stop`, it will not be restarted automatically by Docker even if the
-machine reboots - you will need to `weave launch` it again manually.
+connect` or `weave forget`. Note that if the host reboots, Docker
+will restart the peer automatically.
 
 ### Remove a Peer
 
