@@ -36,14 +36,6 @@ issue (such as a network partition or failed peers) that is preventing
 a quorum from being reached - you will need to [address
 that](/site/troubleshooting.md) before moving on.
 
-Then optionally on each existing peer:
-
-    weave connect <new peer>
-
-This step is not mandatory, but improves the robustness of network
-reformation in the face of node failures as _nodes do not remember to
-connect to discovered peers on restart_.
-
 ### Stop a Peer
 
 A peer can be stopped temporarily with the following command:
