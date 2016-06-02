@@ -24,18 +24,18 @@ may not be successful, or indeed possible:
 * If the peer in question is partitioned from the rest of the network
   when `weave reset` is executed on it
 * If the underlying host is no longer available to execute `weave
-  reset` - for example due to a hardware failure or other unplanned
-  termination
+  reset` due to a hardware failure or other unplanned termination (for
+  example when using autoscaling with spot-instances that can be
+  destroyed without notice)
 
 In some cases you may already be aware of the problem, as you were
 unable to execute `weave reset` successfully or because you know
 through other channels that the host has died - in these cases you can
 proceed straight to the section on reclaiming lost space.
 
-However in some scenarios (for example when using autoscaling and
-spot-instances that can be destroyed without notice) it may not be
-obvious that space has been lost, in which case you can check for it
-periodically with the following command on any peer:
+However in some scenarios it may not be obvious that space has been
+lost, in which case you can check for it periodically with the
+following command on any peer:
 
     weave status ipam
 
